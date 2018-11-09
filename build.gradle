@@ -40,6 +40,10 @@ buildscript {
     }
 }
 
+apply plugin: 'maven'
+
+group = 'com.github.MoblieBytes'
+
 apply plugin: 'com.android.library'
 
 apply from: 'gradle/eclipse.gradle'
