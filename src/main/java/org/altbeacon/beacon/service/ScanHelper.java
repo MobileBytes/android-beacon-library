@@ -394,12 +394,10 @@ class ScanHelper {
     private List<Region> matchingRegions(Beacon beacon, Collection<Region> regions) {
         List<Region> matched = new ArrayList<>();
         for (Region region : regions) {
-            if (region != null) {
-                if (region.matchesBeacon(beacon)) {
-                    matched.add(region);
-                } else {
-                    LogManager.d(TAG, "This region (%s) does not match beacon: %s", region, beacon);
-                }
+            if (region.matchesBeacon(beacon)) {
+                matched.add(region);
+            } else {
+                LogManager.d(TAG, "This region (%s) does not match beacon: %s", region, beacon);
             }
         }
         return matched;
